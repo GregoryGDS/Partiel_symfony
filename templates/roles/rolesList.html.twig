@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Role list{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Role :</h1>
+    <ul>
+        {# légèrement différent de php avec foreach rolesListList as rolesList #}
+        {% for roles in rolesList %}
+            <li>
+                {{ roles.libelle }}
+            </li>
+        {% endfor %}
+    </ul>    
+    {#{% if is_granted('ROLE_ADMIN') %}#}
+        <a href="{{ path('create-roles')}}">Créer rôle</a>    
+    {#{% endif %}#}
+</div>
+{% endblock %}
