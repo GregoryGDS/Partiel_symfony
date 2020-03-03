@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Role{% endblock %}
+
+{% block body %}
+    {{ form_start(createRolesForm) }}
+    <div style='position:center;'>Create Role</div>
+    <div class="row">
+        <div class="col">
+            {{ form_row(createRolesForm.libelle) }}
+        </div>
+    </div>
+    {#{% if is_granted('ROLE_ADMIN') %}#}
+        <a href="{{ path('list-roles')}}">Liste rôle</a>    
+    {#{% endif %}#}
+     {{ form_end(createRolesForm) }}
+
+{% endblock %}

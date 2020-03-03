@@ -19,21 +19,21 @@ class Roles
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $libeÃelle;
+    private $libelle;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLibeÃelle(): ?string
+    public function getLibelle(): ?string
     {
-        return $this->libeÃelle;
+        return $this->libelle;
     }
 
-    public function setLibeÃelle(string $libeÃelle): self
+    public function setLibelle(string $libelle): self
     {
-        $this->libeÃelle = $libeÃelle;
+        $this->libelle = $libelle;
 
         return $this;
     }
