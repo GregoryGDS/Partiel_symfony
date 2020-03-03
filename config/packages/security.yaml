@@ -4,7 +4,9 @@ security:
             algorithm: auto
 
     role_hierarchy:       
-        ROLE_ADMIN: ROLE_USER
+        ROLE_REVIEWER : ROLE_MEMBER
+        ROLE_COMMUNICATION : ROLE_REVIEWER
+        ROLE_ADMIN: ROLE_COMMUNICATION
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
