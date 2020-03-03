@@ -3,6 +3,11 @@ security:
         App\Entity\Users:
             algorithm: auto
 
+    role_hierarchy:       
+        ROLE_REVIEWER : ROLE_MEMBER
+        ROLE_COMMUNICATION : ROLE_REVIEWER
+        ROLE_ADMIN: ROLE_COMMUNICATION
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         # used to reload user from session & other features (e.g. switch_user)
